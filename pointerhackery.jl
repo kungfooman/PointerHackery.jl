@@ -1,3 +1,5 @@
+using StaticArrays
+
 include("offsetof.jl")
 
 memcpy(dst, src, size) = ccall(:memcpy, Ptr{Void}, (Ptr{Void}, Ptr{Void}, UInt64), dst, src, size)
